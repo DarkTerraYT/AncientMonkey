@@ -82,6 +82,7 @@ using Il2CppAssets.Scripts.Simulation.Towers.Behaviors.Abilities;
 using Il2CppAssets.Scripts.Unity.Gamepad;
 using AncientMonkey.Challenge;
 using System.Collections.Generic;
+using Il2CppAssets.Scripts.Unity.UI_New.InGame.AbilitiesMenu;
 
 [assembly: MelonInfo(typeof(AncientMonkey.AncientMonkey), ModHelperData.Name, ModHelperData.Version, ModHelperData.RepoOwner)]
 [assembly: MelonGame("Ninja Kiwi", "BloonsTD6")]
@@ -1158,6 +1159,7 @@ public class AncientMonkey : BloonsTD6Mod
                 if (ability.AbilityName == Ability)
                 {
                     ability.EditTower(tower);
+                    AbilityMenu.instance.AbilitiesChanged();
                 }
             }
           
